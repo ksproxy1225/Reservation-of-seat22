@@ -12,7 +12,7 @@ on:
   watch:
     types: started
   schedule:
-    - cron: 57 21 * * *
+    - cron: 50 21 * * *
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -35,7 +35,6 @@ jobs:
       - name: Install env
         run: |
           sudo rm -rf /etc/apt/sources.list.d/*
-
       - name: Build with Maven
         run: java -version
 
@@ -70,7 +69,7 @@ jobs:
           password: ${{ secrets.MAILPASSWORD }}
           subject: gh Actions job result
           body: possible failed!
-          to: ity4441295@163.com
+          to: 1565217432@qq.com
           from: ghActions
           content_type: text/html
           attachments: ./img/jt1.jpg
